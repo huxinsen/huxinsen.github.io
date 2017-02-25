@@ -1,4 +1,4 @@
-## [Daniel Hoo's Blog](daniel-hoo.github.io)
+## [Daniel Hoo's Blog](https://daniel-hoo.github.io/)
 
 ---
 
