@@ -1,0 +1,260 @@
+---
+layout: post
+title:  Markdown
+description: "Markdown及其基础语法"
+share: false
+tags: [markdown]
+image:
+  feature: abstract-8.jpg
+---
+　　Markdown 是一种[轻量级标记语言](https://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80)，创始人为[约翰·格鲁伯][John-Gruber]（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的[XHTML][](或者[HTML][html])文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。
+
+![Markdown](http://fcruzbello.es/wp-content/uploads/Markdown.png "markdown")
+
+## Markdown 官方文档
+
+---
+>- [创始人 John Gruber 的 Markdown 语法说明][JG-doc]  
+>- [Markdown 中文版语法说明][Chinese-Edition-doc]
+
+## [为什么选择 Markdown](http://xianbai.me/learn-md/article/about/readme.html)
+
+---
+- 它基于纯文本，方便修改和共享
+- 几乎可以在所有的文本编辑器中编写
+- 有众多编程语言的实现，以及应用的相关扩展
+- 在 [GitHub][gh] 等网站中有很好的应用
+- 很容易转换为 *HTML* **文档**或其他格式
+- 适合用来编写文档、记录笔记、撰写***文章***
+
+# Markdown 基础语法
+
+---
+
+## 1. 段落与换行
+
+---
+
+- 段落的前后必须是空行
+- 行尾插入至少两个空格以手动换行
+- 想实现段首缩进，推荐全角模式（一般的中文输入法都是按 shift + space）下输入两个空格
+
+## 2. 标题
+
+---
+
+### 2.1 Setext-式
+
+	标题 1
+	========
+	
+	标题 2
+	--------
+
+标题 1
+========
+
+标题 2
+--------
+
+### 2.2 atx-式
+
+结尾的 `#` 可以省略
+
+	# 标题 1 #
+	
+	## 标题 2 ##
+	
+	###### 标题 6
+
+
+# 标题 1 #
+
+## 标题 2 ##
+
+###### 标题 6
+
+## 3. 引用
+
+---
+
+	> 这是第一层引用
+	>
+	> > 引用可以嵌套，这是第二层引用（不同平台下的显示效果可能不同）
+	>
+	> 回到第一层
+	> 
+	> ### 引用内的标题
+	> - 引用内的
+	> - 列表
+
+效果：
+
+> 这是第一层引用
+>
+> >  引用可以嵌套，这是第二层引用（不同平台下的显示效果可能不同）
+>
+> 回到第一层
+>
+> ### 引用内的标题
+> - 引用内的
+> - 列表
+
+## 4. 强调
+
+---
+
+	*italic*   **bold**  ***italic&bold***  
+	_italic_   __bold__  ___italic&bold___
+
+*italic*   **bold**  ***italic&bold***  
+_italic_   __bold__  ___italic&bold___
+
+## 5. 列表
+
+---
+
+### 5.1 有序列表
+
+	1. 以数字和 `.` 开始
+	2. 注意 `.` 和文字之间要有空格
+	4. 数字序列不影响生成列表序列
+
+1. 以数字和 `.` 开始
+2. 注意 `.` 和文字之间要有空格
+4. 数字序列不影响生成列表序列
+
+### 5.2 无序列表
+
+	- 以 `-` 或 `*` 或 `+` 开始
+	- 注意符号和文字之间要有空格
+
+- 以 `-` 或 `*` 或 `+` 开始
+- 注意符号和文字之间要有空格
+
+
+### 5.3 列表嵌套
+
+	1. 项目一
+		- 特点一
+		- 特点二
+	2. 项目二
+		1. 分项一
+		2. 分项二
+	3. 项目三
+
+1. 项目一
+	- 特点一
+	- 特点二
+2. 项目二
+	1. 分项一
+	2. 分项二
+3. 项目三
+
+## 6. 链接
+
+---
+
+### 6.1 行内式
+
+	[Markdown: Dingus](http://daringfireball.net/projects/markdown/dingus "Dingus")
+
+[Markdown: Dingus](http://daringfireball.net/projects/markdown/dingus "Dingus")
+
+### 6.2 参考式
+
+	[Markdown: Dingus][dingus]
+
+	[dingus]: http://daringfireball.net/projects/markdown/dingus "Dingus"
+
+[Markdown: Dingus][dingus]
+
+[dingus]: http://daringfireball.net/projects/markdown/dingus "Dingus"
+
+注：链接定义可以在文档内其他任何地方，标题（如例中的"Dingus"）可不写。
+
+## 7. 图片
+
+---
+ 
+行内式：
+
+	![Markdown](http://fcruzbello.es/wp-content/uploads/Markdown.png "markdown")
+
+
+参考式：
+
+	![Markdown][markdown]
+
+	[markdown]: http://fcruzbello.es/wp-content/uploads/Markdown.png "markdown"
+
+标题可选，效果如本文开头所示。
+
+## 8. 代码
+
+---
+
+### 8.1 行内代码
+
+	用反引号包裹你想要高亮的代码，如 `<h1>Markdown</h1>`
+
+效果：
+
+用反引号包裹你想要高亮的代码，如 `<h1>Markdown</h1>`
+
+### 8.2 代码块
+
+使用至少 4 个空格或 1 个 Tab 缩进：
+
+		$(document).ready(function () {
+			alert("Hello World!");
+		});
+
+或用 <code>```</code> 包裹一段代码，并指定一种语言：
+
+	```javascript
+	$(document).ready(function () {
+		alert("Hello World!");
+	});
+	```
+
+效果：
+
+```javascript
+$(document).ready(function () {
+	alert("Hello World!");
+});
+```
+
+## 9. 分割线
+
+---
+
+三个以上的 `-`、`*` 或 `_`：
+
+	---
+	
+	* * * 
+	
+	_ _ _ _
+
+效果：
+
+---
+
+* * * 
+
+_ _ _ _
+
+## 10. 注意
+
+---
+
+　　不同的Markdown解释器或工具对相应语法（扩展语法）的解释效果不尽相同，具体可参见工具的使用说明。
+
+[John-Gruber]: https://zh.wikipedia.org/wiki/%E7%B4%84%E7%BF%B0%C2%B7%E6%A0%BC%E9%AD%AF%E4%BC%AF
+[JG-doc]: http://daringfireball.net/projects/markdown/syntax
+[Chinese-Edition-doc]: http://wowubuntu.com/markdown/
+[xhtml]: https://zh.wikipedia.org/wiki/XHTML
+[html]: https://zh.wikipedia.org/wiki/HTML
+[gh]: https://github.com/ 
