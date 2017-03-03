@@ -10,8 +10,9 @@ nav {
 }
 
 nav img {
+	height: 60px;
 	float :left;
-	padding-left: 40px;
+	padding-left: 30px;
 }
 
 nav li {
