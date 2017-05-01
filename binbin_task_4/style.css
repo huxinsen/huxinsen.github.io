@@ -1,0 +1,29 @@
+#queue {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+#queue li {
+  height: 20px;
+  padding: 10px;
+  margin: 5px;
+  float: left;
+  background-color: red;
+}
+
+[type="button"] {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid gray;
+}
+
+#left-in, #right-in, #right-out {
+  margin-left: 5px;
+}
+
+#left-out {
+  margin-left: 30px;
+}
