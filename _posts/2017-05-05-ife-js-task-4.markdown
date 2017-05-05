@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  任务四：基础JavaScript练习（一）
-description: "任务四：基础JavaScript练习（一）"
+title: 基础JavaScript练习（一）
+description: "基础JavaScript练习（一）"
 share: false
 tags: [ife, javascript]
 image:
