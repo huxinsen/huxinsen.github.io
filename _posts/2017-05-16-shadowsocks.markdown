@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Shadowsocks 
+title: DigitalOcean + Shadowsocks 科学上网
 description: "shadowsocks科学上网"
 share: false
 tags: [shadowsocks, DigitalOcean]
 image:
   feature: shadowsocks.jpg
 ---
-## Student Developer Pack
+## Student Developer Pack（学生党福利）
 
 <a href="https://education.github.com/pack" target="_blank">Student Developer Pack</a> 是 GitHub 面向学生的开发包，里面免费提供多款开发工具（非常感谢 GitHub）。现在 GitHub 关闭了国内 edu 邮箱注册，但可以通过上传学生证、成绩单照片等的方式注册。以我个人的经验，推荐上传成绩单，因为第一次用校园卡注册被拒，原因说是不足以证明学生身份。拿到开发包之后，我们重点关注DigitalOcean。
 
 ## DigitalOcean
 
-<a href="https://m.do.co/c/5c58bae0ea11" target="_blank">DigitalOcean</a> 是一家建立于美国的云基础架构提供商，面向软件开发人员提供虚拟专用服务器（VPS）。注册用户后，充值 $5 激活账户（需绑定个人信用卡或者使用 Paypal 支付，后者更方便）。如果通过上面的链接注册，DigitalOcean 会送你 $10（我也会收到一定奖励）。激活账号之后，填入 GitHub 提供的优惠码得到 $50。关于优惠码若出现任何问题，填写问题详单，客服会很快帮你解决的。
+<a href="https://m.do.co/c/5c58bae0ea11" target="_blank">DigitalOcean</a> 是一家建立于美国的云基础架构提供商，面向软件开发人员提供虚拟专用服务器（VPS）。注册用户后，充值 $5 激活账户（需绑定个人信用卡或者使用 Paypal 支付，后者更方便）。如果通过上面的链接注册，DigitalOcean 会送你 $10（我也会收到一定奖励）。激活账号之后，填入 GitHub 提供的优惠码可以得到 $50。关于优惠码若出现任何问题，填写问题详单，客服会很快帮你解决的。
 
 ## Shadowsocks
 一个轻量级隧道 Socks5 代理，可加密网络通道。简单来说就是科学上网工具。
@@ -115,7 +115,7 @@ Mac 端的启动后可自动实现全局科学上网。Windows 端的需要配�
 
 ![](http://i345.photobucket.com/albums/p392/daniel-hoo/ss-switchyomega_zpszdbh50be.png)
 
-配置好之后，快去享受自由上网的乐趣吧！
+配置好之后，尽情享受自由上网的乐趣吧！
 
 ## 后记
 
