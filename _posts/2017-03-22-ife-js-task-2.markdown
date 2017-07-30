@@ -260,4 +260,4 @@ console.log(numbers);
 ### 8. 已提交作业
 
 代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_2.html" target="_blank">https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_2.html</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/binbin_task_2/" target="_blank">https://daniel-hoo.github.io/binbin_task_2/</a>
+demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/2/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/2/</a>

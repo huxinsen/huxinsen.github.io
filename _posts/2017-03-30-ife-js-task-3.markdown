@@ -148,4 +148,4 @@ forEach() 方法对数组的每个元素执行一次提供的函数。
 ### 5. 已提交作业
 
 代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_3.html" target="_blank">https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_3.html</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/binbin_task_3/" target="_blank">https://daniel-hoo.github.io/binbin_task_3/</a>
+demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/3/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/3/</a>

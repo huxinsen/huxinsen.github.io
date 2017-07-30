@@ -119,4 +119,4 @@ document.getElementById("button").onclick=function(){/* 事件处理代码 */};
 ### 4. 已提交作业
 
 代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_1.html" target="_blank">https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_1.html</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/binbin_task_1/" target="_blank">https://daniel-hoo.github.io/binbin_task_1/</a>
+demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/1/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/1/</a>

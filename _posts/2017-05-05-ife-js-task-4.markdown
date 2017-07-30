@@ -53,4 +53,4 @@ image:
 ### 2. 已提交作业
 
 代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/tree/master/BinBin/task_4" target="_blank">https://github.com/daniel-hoo/ife-exercises/tree/master/BinBin/task_4</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/binbin_task_4/" target="_blank">https://daniel-hoo.github.io/binbin_task_4/</a>
+demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/4/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/4/</a>
