@@ -3,6 +3,7 @@ layout: post
 title:  零基础JavaScript编码（三）
 description: "零基础JavaScript编码（三）"
 share: false
+modified: 2019-08-11
 tags: [ife, javascript]
 image:
   feature: abstract-3.jpg
@@ -147,5 +148,5 @@ forEach() 方法对数组的每个元素执行一次提供的函数。
 
 ### 5. 已提交作业
 
-代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_3.html" target="_blank">https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_3.html</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/3/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/3/</a>
+代码地址：<a href="https://github.com/huxinsen/ife-exercises/blob/master/BinBin/task_3.html" target="_blank">https://github.com/huxinsen/ife-exercises/blob/master/BinBin/task_3.html</a>  
+demo 地址：<a href="https://huxinsen.github.io/ife-exercises/binbin-task/3/" target="_blank">https://huxinsen.github.io/ife-exercises/binbin-task/3/</a>

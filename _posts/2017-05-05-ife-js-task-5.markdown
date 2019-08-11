@@ -3,6 +3,7 @@ layout: post
 title: 基础JavaScript练习（二）
 description: "基础JavaScript练习（二）"
 share: false
+modified: 2019-08-11
 tags: [ife, javascript]
 image:
   feature: abstract-5.jpg
@@ -44,5 +45,5 @@ image:
 
 ### 2. 已提交作业
 
-代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/tree/master/BinBin/task_5" target="_blank">https://github.com/daniel-hoo/ife-exercises/tree/master/BinBin/task_5</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/5/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/5/</a>
+代码地址：<a href="https://github.com/huxinsen/ife-exercises/tree/master/BinBin/task_5" target="_blank">https://github.com/huxinsen/ife-exercises/tree/master/BinBin/task_5</a>  
+demo 地址：<a href="https://huxinsen.github.io/ife-exercises/binbin-task/5/" target="_blank">https://huxinsen.github.io/ife-exercises/binbin-task/5/</a>

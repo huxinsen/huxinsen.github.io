@@ -3,6 +3,7 @@ layout: post
 title:  零基础JavaScript编码（二）
 description: "零基础JavaScript编码（二）"
 share: false
+modified: 2019-08-11
 tags: [ife, javascript]
 image:
   feature: abstract-2.jpg
@@ -259,5 +260,5 @@ console.log(numbers);
 
 ### 8. 已提交作业
 
-代码地址：<a href="https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_2.html" target="_blank">https://github.com/daniel-hoo/ife-exercises/blob/master/BinBin/task_2.html</a>  
-demo 地址：<a href="https://daniel-hoo.github.io/ife-exercises/binbin-task/2/" target="_blank">https://daniel-hoo.github.io/ife-exercises/binbin-task/2/</a>
+代码地址：<a href="https://github.com/huxinsen/ife-exercises/blob/master/BinBin/task_2.html" target="_blank">https://github.com/huxinsen/ife-exercises/blob/master/BinBin/task_2.html</a>  
+demo 地址：<a href="https://huxinsen.github.io/ife-exercises/binbin-task/2/" target="_blank">https://huxinsen.github.io/ife-exercises/binbin-task/2/</a>

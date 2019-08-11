@@ -1,22 +1,22 @@
-title:            Daniel Hoo
-description:      Daniel Hoo's Blog.
+title:            Hu XinSen
+description:      Hu XinSen's Blog.
 disqus_shortname: 
 reading_time:     true
-words_per_minute: 200
+words_per_minute: 60
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url:
 
 # Owner/author information
 owner:
-  name:           Daniel Hoo
+  name:           Hu XinSen
   avatar:         avatar.jpg
-  bio:            "I am a Software Engineering student. In spare time, I like cycling, photographing and watching movies."
-  email:          danielhoo.chn@gmail.com
+  bio:            "Enjoy coding! Enjoy life!"
+  email:          xinsen.hu@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         daniel-hoo
+  github:         huxinsen
   stackexchange:  
   linkedin:       
   instagram:      
