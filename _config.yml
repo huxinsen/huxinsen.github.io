@@ -1,8 +1,8 @@
 title:            Hu XinSen
 description:      Hu XinSen's Blog.
-disqus_shortname: 
+disqus_shortname: https-huxinsen-github-io
 reading_time:     true
-words_per_minute: 60
+words_per_minute: 15
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url:
@@ -87,3 +87,5 @@ exclude:
   - package.json
   - spec
   - tmp
+
+plugins: [jekyll-paginate]

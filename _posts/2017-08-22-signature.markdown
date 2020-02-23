@@ -3,9 +3,10 @@ layout: post
 title: 数字签名是什么？
 description: "理解什么是数字签名"
 share: false
+modified: 2020-02-24
 tags: [信息安全]
 image:
-  feature: signature.jpg
+  feature: 2017-08-22-signature/1.jpg
 ---
 > 翻译自：<a href="http://www.youdzone.com/signature.html" target="_blank">http://www.youdzone.com/signature.html</a>
 > 
@@ -13,15 +14,15 @@ image:
 
 ### 一、
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic1_zpstj9yfu6d.png)
+![](/images/2017-08-22-signature/2.png)
 
 Bob 有两把钥匙，一把是公钥（Public Key），另一把是私钥（Private Key）。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic2_zpstf1uxhvq.png)
+![](/images/2017-08-22-signature/3.png)
 
 Bob 的公钥可对所有人公开，但私钥只有他自己知道。密钥用来加密信息，这意味着只有知道密钥的人，才能使由加密而变得混乱的信息重新变得可读。Bob 的两把钥匙中，可用任意一把加密数据，另一把来解密。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic3_zpsev4mgk4q.png)
+![](/images/2017-08-22-signature/4.png)
 
 Susan 用 Bob 的公钥加密一段消息，然后发给 Bob, Bob 用他的私钥解密就可以看到消息内容。注意，Bob 的同事有可能获得 Susan 加密后的信息，但是没有私钥来解密，获得这段信息也没有用。
 
@@ -29,19 +30,19 @@ Susan 用 Bob 的公钥加密一段消息，然后发给 Bob, Bob 用他的私�
 
 Bob 用私钥和相应的软件，可在文件及其他数据上签上数字签名（Digital Signature）。这个数字签名就像是 Bob 在数据上印的一个章，它是 Bob 独有的，并且很难伪造。另外，这个签名确保签过名的数据有任何修改都能被发现。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic4_zpskwhal5qy.png)
+![](/images/2017-08-22-signature/5.png)
 
 为了给文件签名，Bob 的软件先通过 Hash 算法为文件的数据生成消息摘要（Message Digest）。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic5_zps1cwtjay0.png)
+![](/images/2017-08-22-signature/6.png)
 
 然后用 Bob 的私钥对消息摘要加密，生成数字签名。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic6_zpseemkceex.png)
+![](/images/2017-08-22-signature/7.png)
 
 最后，把数字签名附加到文件下面。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic7_zpsiw3na7mx.png)
+![](/images/2017-08-22-signature/8.png)
 
 现在 Bob 把文件发给 Pat。
 
@@ -53,7 +54,7 @@ Bob 用私钥和相应的软件，可在文件及其他数据上签上数字签�
 
 正好 Susan 在数字证书认证机构（Certificate Authority，缩写为CA）工作。Susan 可以为 Bob 的公钥和他的一些信息签名，进而生成一个数字证书。
 
-![](http://i345.photobucket.com/albums/p392/daniel-hoo/blog/signature/pic8_zpsu33y1eip.png)
+![](/images/2017-08-22-signature/9.png)
 
 现在 Bob 的同事可以通过检查 Bob 受信的证书确认“ Bob 的公钥”的确属于 Bob。事实上，Bob 的公司里没有人会接受一个没有 Susan 为其生成证书的签名。而且，当私钥泄露或不再需要时，Susan 有权使签名无效。当然，还有更权威的证书认证机构来认证 Susan。
 

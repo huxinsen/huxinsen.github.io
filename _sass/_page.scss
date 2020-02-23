@@ -78,7 +78,8 @@ body {
 	h2 {
 		margin: 0;
 		@include font-rem(18);
-		text-transform: uppercase;
+		font-weight: 300;
+		font-style: italic;
 		color: lighten($base-color,40);
 
 		@media #{$medium} {
@@ -122,7 +123,6 @@ body {
 	h2 {
 		margin: 0;
 		color: #fff;
-		text-transform: uppercase;
 
 		@media #{$medium} {
 			a {

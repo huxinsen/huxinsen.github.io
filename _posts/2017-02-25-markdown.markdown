@@ -3,14 +3,12 @@ layout: post
 title:  Markdown
 description: "Markdown及其基础语法"
 share: false
-modified: 2019-08-11
+modified: 2020-02-24
 tags: [markdown]
 image:
-  feature: abstract-8.jpg
+  feature: 2017-02-25-markdown/1.png
 ---
 　　Markdown 是一种[轻量级标记语言](https://zh.wikipedia.org/wiki/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80)，创始人为[约翰·格鲁伯][John-Gruber]（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的[XHTML][](或者[HTML][html])文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。
-
-![Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/640px-Markdown-mark.svg.png "markdown")
 
 ## Markdown 官方文档
 
