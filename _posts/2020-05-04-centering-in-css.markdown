@@ -59,7 +59,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
     </table>
     ```
 
-    或使用 CSS：
+    或使用 `CSS`：
 
     ```css
     .center-table {
@@ -72,6 +72,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
     ```
 
   - `flexbox` 布局：
+
     ```css
     .flex-center-vertically {
       display: flex;
@@ -79,7 +80,9 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
       justify-content: center;
     }
     ```
+
   - 使用 `ghost element`：
+
     ```css
     .ghost-center {
       position: relative;
@@ -101,6 +104,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
 - 使用定位属性，设置父元素为相对定位，子元素为绝对定位 `top:50%`，再设置绝对子元素的 `margin-top: -元素高度的一半;` 或 `transform: translateY(-50%);`。
 - 允许拉伸到容器高度：将元素转换为 `table` 布局。
 - `flexbox` 布局：
+
   ```css
   .flex-center-vertically {
     display: flex;
@@ -111,7 +115,8 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
 
 ## 三、水平垂直居中
 
-- table:
+- `table` 布局:
+
   ```html
   <table style="width: 100%;">
     <tr>
@@ -121,7 +126,9 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
     </tr>
   </table>
   ```
+
   或者：
+
   ```html
   <div class="something-semantic">
     <div class="something-else-semantic">
@@ -129,6 +136,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
     </div>
   </div>
   ```
+
   ```css
   .something-semantic {
     display: table;
@@ -140,6 +148,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
     vertical-align: middle;
   }
   ```
+
 - 使用 `ghost element`。
 - 组合使用前述定位属性。
 - 已知宽高：设置父元素为相对定位，子元素为绝对定位，`top: 0; right: 0; bottom: 0; left: 0; margin: auto;`。
@@ -170,7 +179,7 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
   }
   ```
 
-- 使用 `grid`：
+- `grid` 布局：
 
   ```html
   <div class="parent">
@@ -201,92 +210,92 @@ CSS 居中是 CSS 布局里最常见的问题，本文总结在不同情况下�
 
 ## 四、优缺点总结
 
-1. **负 margin**
+### 1. 负 margin
 
-   优点：
+优点：
 
-   - 跨浏览器兼容性好，包括 IE6-7
-   - 代码量少
+- 跨浏览器兼容性好，包括 IE6-7
+- 代码量少
 
-   缺点：
+缺点：
 
-   - 不能自适应。不支持百分比属性值和 `min-/max-` 属性设置
-   - 内容可能溢出容器
-   - 需要补偿 `padding` 或使用 `box-sizing: border-box;`
+- 不能自适应。不支持百分比属性值和 `min-/max-` 属性设置
+- 内容可能溢出容器
+- 需要补偿 `padding` 或使用 `box-sizing: border-box;`
 
-2. **Transforms**
+### 2. Transforms
 
-   优点：
+优点：
 
-   - 内容高度可变
-   - 代码量少
+- 内容高度可变
+- 代码量少
 
-   缺点：
+缺点：
 
-   - IE8 不支持
-   - 需要浏览器厂商前缀
-   - 可能影响其他 `transform` 效果
-   - 某些情况下导致边界或文本渲染模糊
+- IE8 不支持
+- 需要浏览器厂商前缀
+- 可能影响其他 `transform` 效果
+- 某些情况下导致边界或文本渲染模糊
 
-3. **Absolute Center**
+### 3. Absolute Center
 
-   ```css
-   .Absolute-Center {
-     margin: auto;
-     position: absolute;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-   }
-   ```
+```css
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+```
 
-   优点：
+优点：
 
-   - 跨浏览器兼容性好
-   - 代码量少
-   - 支持百分比属性值和 `min-/max-`属性
-   - 不受 `padding` 影响
+- 跨浏览器兼容性好
+- 代码量少
+- 支持百分比属性值和 `min-/max-`属性
+- 不受 `padding` 影响
 
-   缺点：
+缺点：
 
-   - 内容定高
-   - 设置 `overflow:auto` 防止内容溢出
+- 内容定高
+- 设置 `overflow:auto` 防止内容溢出
 
-4. **Table-Cell**
+### 4. Table-Cell
 
-   优点：
+优点：
 
-   - 内容高度可变
-   - 内容溢出会将父元素撑开
-   - 跨浏览器兼容性好
+- 内容高度可变
+- 内容溢出会将父元素撑开
+- 跨浏览器兼容性好
 
-   缺点：
+缺点：
 
-   - 需要更多的 `html` 标记
+- 需要更多的 `html` 标记
 
-5. **Inline-Block**
+### 5. Inline-Block
 
-   优点：
+优点：
 
-   - 内容高度可变
-   - 内容溢出会将父元素撑开
-   - 跨浏览器兼容性好
+- 内容高度可变
+- 内容溢出会将父元素撑开
+- 跨浏览器兼容性好
 
-   缺点：
+缺点：
 
-   - 比较 hack，不好理解
+- 比较 hack，不好理解
 
-6. **Flexbox**
+### 6. Flexbox
 
-   优点：
+优点：
 
-   - 内容可变宽高
-   - 可实现更复杂的布局
+- 内容可变宽高
+- 可实现更复杂的布局
 
-   缺点：
+缺点：
 
-   - 不兼容 IE9（包括 IE9) 之前的版本
+- 不兼容 IE9（包括 IE9) 之前的版本
 
 ## 参考链接
 
