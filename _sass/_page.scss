@@ -330,6 +330,32 @@ header .entry-meta {
 	margin-top: 0;
 }
 
+table {
+	border-collapse: collapse;
+}
+
+table tr {
+	background-color: white;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+table tr th {
+  padding: 6px 13px;
+	border: 1px solid #cccccc;
+}
+
+table tr td {
+  padding: 6px 13px;
+  border: 1px solid #cccccc;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
 // Permalink icon for link post
 .permalink {
 	margin-right: 7px;
