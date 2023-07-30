@@ -16,8 +16,8 @@ image:
 - `Box` 垂直方向的距离由 `margin` 决定。属于同一个 `BFC` 的两个相邻 `Box` 的 `margin` 会发生重叠。
 - 每个元素的 `margin box` 的左边， 与包含块 `border box`的左边相接触（对于从左往右的格式化，否则相反）。即使存在浮动也是如此。
 - `BFC` 的区域不会与 `float box` 重叠。
-- `BFC` 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
 - 计算 `BFC` 的高度时，浮动元素也参与计算。
+- 前面两点其实这样理解：`BFC` 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
 
 ## 如何创建 BFC
 
@@ -31,9 +31,9 @@ image:
 
 ## BFC 的作用
 
-- 消除外部浮动影响
-- 清除内部浮动
-- 防止垂直 `margin` 重叠
+- [消除外部浮动影响](https://codepen.io/huxinsen/pen/gOQQQzQ)
+- [清除内部浮动](https://codepen.io/huxinsen/pen/QWJJJZW)
+- [防止垂直 margin 重叠](https://codepen.io/huxinsen/pen/mdQQQQQ)
 
 ## 参考链接
 
