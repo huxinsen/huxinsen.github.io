@@ -194,7 +194,7 @@ image:
    git push origin gh-pages
    ```
 
-## 合并 commit 的简便方法，
+## 合并 commit 的简便方法
 
 ---
 
