@@ -1,0 +1,194 @@
+---
+layout: post
+title: 埋点上报
+description: '前端埋点上报代码片段'
+share: false
+tags: [埋点，上报]
+image:
+  feature: abstract-1.jpg
+---
+
+前端埋点上报代码片段
+
+上报工具函数：
+
+```typescript
+import 'intersection-observer';
+import MD5 from 'md5';
+
+export enum TrackingPage {
+  MainPage = 'main_page',
+}
+
+export enum TrackingOperation {
+  View = 'view',
+  Click = 'click',
+  Impression = 'impression',
+}
+
+export enum TrackingType {
+  HotQuestion = 'HotQuestion',
+  Shortcut = 'Shortcut',
+}
+
+export const TRACKING_SECTION = {
+  [TrackingType.HotQuestion]: 'hot_question',
+  [TrackingType.Shortcut]: 'bottom_question',
+};
+
+export const TRACKING_TARGET = {
+  [TrackingType.HotQuestion]: 'question',
+  [TrackingType.Shortcut]: 'question',
+};
+
+export function dispatchTrack(data?: {
+  page?: TrackingPage;
+  operation: TrackingOperation;
+  section?: string;
+  target?: string;
+  data?: any;
+}) {
+  const { operation = TrackingOperation.View,
+  page = TrackingPage.MainPage } = data || {};
+  const info: any = {
+    page_type: page,
+    operation,
+  };
+
+  if (data?.section) {
+    info.page_section = data.section;
+  }
+
+  if (data?.target) {
+    info.target_type = data.target;
+  }
+
+  if (data?.data) {
+    info.data = { ...data.data };
+  }
+
+  // 发送上报请求
+}
+
+const reportImpression = (name: TrackingType, data = '',
+page = TrackingPage.MainPage) => {
+  let tackingData = {};
+  if (data) {
+    try {
+      if (typeof data === 'string') {
+        tackingData = JSON.parse(data);
+      }
+    } catch (_) {
+      tackingData = {};
+    }
+  }
+
+  dispatchTrack({
+    page,
+    operation: TrackingOperation.Impression,
+    section: TRACKING_SECTION[name] || '',
+    target: TRACKING_TARGET[name] || '',
+    data: { viewed_objects: [tackingData] },
+  });
+};
+
+const viewTimerList = {} as any;
+
+export const io = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.target instanceof HTMLElement) {
+        const {
+          trackingPage = TrackingPage.MainPage,
+          trackingName = '',
+          trackingIndex = '',
+          trackingData = '',
+          trackingOnce,
+        } = entry.target.dataset;
+        const trackingKey = MD5(trackingName + trackingIndex
+         + trackingData + trackingPage);
+
+        if (viewTimerList[trackingKey]) {
+          clearTimeout(viewTimerList[trackingKey]);
+          viewTimerList[trackingKey] = null;
+        }
+
+        if (entry.intersectionRatio > 0.5) {
+          viewTimerList[trackingKey] = setTimeout(() => {
+            reportImpression(trackingName as TrackingType, 
+            trackingData, trackingPage as TrackingPage);
+
+            if (trackingOnce) {
+              removeObserver(entry.target as HTMLElement);
+            }
+          }, 1001); // 超过1s上报
+        }
+      }
+    }
+  },
+  { threshold: [0.5] }
+);
+
+const handleIo = (ref: HTMLElement | HTMLElement[],
+func: 'observe' | 'unobserve') => {
+  try {
+    if (Array.isArray(ref)) {
+      ref.forEach((element) => {
+        const target = element;
+        if (Array.isArray(target)) {
+          io[func](target[0]);
+        } else {
+          io[func](target);
+        }
+      });
+    } else {
+      io[func](ref);
+    }
+  } catch (_) {
+    // do nothing
+  }
+};
+
+export const addObserver = (ref: HTMLElement | HTMLElement[])
+ => {
+  handleIo(ref, 'observe');
+};
+
+export const removeObserver = (ref: HTMLElement | HTMLElement[])
+ => {
+  handleIo(ref, 'unobserve');
+};
+
+```
+
+使用：
+
+```jsx
+const MyComponent = (props) => {
+  const trackingName = TrackingType.MyComponentType;
+  const trackingData = {
+    field_a: 'A',
+    field_b: 'B',
+  };
+  const myRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    addObserver(myRef.current);
+
+    return () => {
+      removeObserver(myRef.current);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={myRef}
+      data-tracking-name={trackingName}
+      data-tracking-data={JSON.stringify(trackingData)}
+      data-tracking-once
+    >
+      ...
+    </div>
+  );
+};
+```
